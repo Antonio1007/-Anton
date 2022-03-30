@@ -1,0 +1,9 @@
+Git & GitHub
+2. Git state- 查看目前狀態
+   Git add - 將所有檔案加入
+   Git commit - 提交至本地數據庫        
+   Git log - 瀏覽歷史紀錄        
+   Git push [ Repo_name ] [ Branch_name ] - 更新遠端數據庫資料        
+   Git remote -v - 顯示遠端數據庫的URLs        
+   Git branch - 建立一個分支        
+   fork - 在原本的git專案外創造一個個人的遠端空間供團隊共享使用 
