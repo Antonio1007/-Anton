@@ -5,7 +5,7 @@
    Git log - 瀏覽歷史紀錄        
    Git push [ Repo_name ] [ Branch_name ] - 更新遠端數據庫資料        
    Git remote -v - 顯示遠端數據庫的URLs        
-   Git branch - 建立一個分支        
+   Git branch - 建立一個分支        
    fork - 在原本的git專案外創造一個個人的遠端空間供團隊共享使用 
 3. 在桌面使用mkdir建立一個資料夾>在該資料夾中使用git init>
    前往GitHub新增一個repo>複製這個repo的https的URLs後回到終端機使用git remote add origin +貼上剛剛複製的URLs>
@@ -26,7 +26,7 @@
 6. ==
 7. let x = 10
    let y = 3
-   let remainder = x - y
+   let remainder = x % y
    print(remainder)
 8. let 只能加入不變的數，而var則可以裝入不同數，像是一個帽子可以選擇裝入一隻兔子或是一隻鳥
 9. 命名的習慣先由小寫字母作為開頭，並以第一個字改成大寫字母作為分隔
@@ -37,7 +37,9 @@
 2. myFriends += [“Ian”, “Bomi”, “Kevin”]
 3. myFriends.insert(“Michael”, at: 3)
 4. myFriends.swapAt(0,2)
-5. print(myFriends[0...3])
+5. for friends in myFriends {
+    print(friends)
+   }
 6. myFriends[5]，出現error因為要找的數量超過array的範圍
 7. myFriends.first
 8. myFriends.last
@@ -46,7 +48,8 @@
     myCountryNumber.updateValue(“44”, forKey: “GB”)
     myCountryNumber.updateValue(“81”, forKey: “JP”)
 11. myCountryNumber.updateValue(“0”, forKey: “GB”)
-12. var emptymyCountryNumber: [String: Int]
+12. var emptyDict : [String: String] = [:]
+    print(emptyDict)
 13. myCountryNumber.removeValue(forKey: “GB”)
 //Control flow
 1. let lottoNumbers = [10, 9, 8, 7, 6, 5]
