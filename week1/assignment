@@ -1,0 +1,121 @@
+//Git & GitHub
+2. Git state- 查看目前狀態
+   Git add - 將所有檔案加入
+   Git commit - 提交至本地數據庫        
+   Git log - 瀏覽歷史紀錄        
+   Git push [ Repo_name ] [ Branch_name ] - 更新遠端數據庫資料        
+   Git remote -v - 顯示遠端數據庫的URLs        
+   Git branch - 建立一個分支        
+   fork - 在原本的git專案外創造一個個人的遠端空間供團隊共享使用 
+3. 在桌面使用mkdir建立一個資料夾>在該資料夾中使用git init>
+   前往GitHub新增一個repo>複製這個repo的https的URLs後回到終端機使用git remote add origin +貼上剛剛複製的URLs>
+   輸入git push —set-upstream origin master>輸入username, password, authentication token
+//Basic
+1. let Pi: Double = 3.14 
+2. let x:Int = 23
+   let y:Int = 45
+   let average = (x + y)/2
+3. let average: Double = Double((x + y)/2)
+   (10/3)的型態是Int，(10.0/3.0)的型態是Double
+4. var flag:Bool = true
+   var inputString:String = "Hello World."
+   var bitInBite:Int = 8
+   var averageScore:Double = 86.8
+5. var salary = 22000
+   salary += 28000
+6. ==
+7. let x = 10
+   let y = 3
+   let remainder = x % y
+   print(remainder)
+8. let 只能加入不變的數，而var則可以裝入不同數，像是一個帽子可以選擇裝入一隻兔子或是一隻鳥
+9. 命名的習慣先由小寫字母作為開頭，並以第一個字改成大寫字母作為分隔
+10. Swift能夠辨認目前輸入的內容型態，可讓code更為精簡
+11. 這兩串phoneNumber的型態不同，一個是Int一個是String
+//Collection
+1. var myFriends: [String] = []
+2. myFriends += [“Ian”, “Bomi”, “Kevin”]
+3. myFriends.insert(“Michael”, at: 3)
+4. myFriends.swapAt(0,2)
+5. for friends in myFriends {
+    print(friends)
+   }
+6. myFriends[5]，出現error因為要找的數量超過array的範圍
+7. myFriends.first
+8. myFriends.last
+9. var myCountryNumber: [String: Int] = [:]
+10. myCountryNumber.updateValue(“1”, forKey: “US”)
+    myCountryNumber.updateValue(“44”, forKey: “GB”)
+    myCountryNumber.updateValue(“81”, forKey: “JP”)
+11. myCountryNumber.updateValue(“0”, forKey: “GB”)
+12. var emptyDict : [String: String] = [:]
+    print(emptyDict)
+13. myCountryNumber.removeValue(forKey: “GB”)
+//Control flow
+1. let lottoNumbers = [10, 9, 8, 7, 6, 5]
+      for i in 3..<lottoNumbers.count {
+          print("\(lottoNumbers[i])")
+    }
+2. var i = 5
+   while i < 11 {
+      print(i)
+      i += 1
+  }
+  var j = 10
+  while 5 < j {
+      print(j)
+      j -= 2
+  }
+3. var i = 5
+   while i < 11 {
+      print(i)
+      i += 1
+  }
+  var j = 10
+  while 5 < j {
+      print(j)
+      j -= 2
+  }
+4. var i = 5
+   repeat {
+      print(i)
+      i += 1
+   } while i < 11
+            
+   var countdown = 10
+   repeat {
+      print(countdown)
+      countdown -= 2
+   }    while countdown > 5
+5. While會在開始前檢查狀態，而repeat-while會開始後再檢查
+6. var isRaining = true
+   if isRaining {
+       print("It's raining, I don't want to work today.")
+   }
+   else {
+       print("Althrogh it's sunny, I still don't want to work today.")
+   }
+7.var jobLevel = 1
+  switch jobLevel {
+  case 1:
+      print("Member")
+  case 2:
+      print("TeamLeader")
+  case 3:
+      print("Manager")
+  case 4:
+      print("Director")
+  default:
+      print("We don't have this job")
+  }
+//Function
+1. func greet(person: String){
+      print("Hello,", person)
+   }
+   greet(person: "Luke")
+2. func multiply(a:Int, b:Int = 10){
+      print(a*b)
+   }
+   multiply(a: )
+3. argument label是function外呼叫的外部參數，parameter是function中存取的內部參數 
+4. String, Double
