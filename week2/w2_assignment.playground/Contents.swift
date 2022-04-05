@@ -3,9 +3,16 @@ import Foundation
 
 //Object-Oriented Swift
 //1.
+enum Gender {
+    case male
+    case female
+    case undefined
+}
+
 class Animal {
-    enum Gender {
-      case male, female, undefinded
+    var gender: Gender
+    init (gender: Gender){
+        self.gender = gender
     }
     func eat() {
       print("I eat everything.")
@@ -13,27 +20,24 @@ class Animal {
 }
 //2.
 class Elephant: Animal {
-    var elephant: String
-    init(elephant: String) {
-        self.elephant = elephant
+    init() {
+        super.init(gender: Gender.male)
     }
     override func eat() {
         print("Usually eat grass.")
     }
    }
 class Tiger: Animal {
-    var tiger: String
-    init(tiger: String) {
-        self.tiger = tiger
+    init() {
+        super.init(gender: Gender.male)
     }
     override func eat() {
         print("Usually eat meat.")
     }
     }
 class Horse: Animal {
-    var horse: String
-    init(horse: String) {
-        self.horse = horse
+    init() {
+        super.init(gender: Gender.male)
     }
     override func eat() {
         print("Usually eat grass.")
@@ -42,13 +46,18 @@ class Horse: Animal {
 //3.
 class Zoo {
     
-    var weeklyHot = Animal(tiger: String)
+    var weeklyHot: Animal
     
-    init(weeklyHot: Animal ) {}
+    init(weeklyHot: Animal) {
+        self.weeklyHot = weeklyHot
+    }
 }
 
 let zoo = Zoo(weeklyHot: Tiger())
 
+var tiger = Tiger()
+var elephant = Elephant()
+var horse = Horse()
 
 zoo.weeklyHot = tiger
 zoo.weeklyHot = elephant
@@ -81,58 +90,63 @@ Gasline.oil92.rawValue
 //associated value能夠在enum的case中儲存相關聯資料
 //2.
 class Pet {
-  let name: String
-  
-  init(name:String) {
-    self.name = name
+    let name: String
+    init(name: String){
+        self.name = name
     }
 }
 class People {
-    let pet: Bool
-    init(pet: Bool) {
+    let pet: Pet?
+    init(pet: Pet? = nil) {
         self.pet = pet
     }
-    
-    if let People = pet Bool? pet {return}
-    }
+}
 
+func getPet(for pet: Pet?) {
+    guard let p = pet else { return }
+}
+
+
+func getPet2(for pet: Pet?) {
+    if let p = pet {}
+}
 
 //Protocol in Swift
 //1.
 protocol PoliceMan {
     func arrestCriminals()
 }
-//2.
-struct Person: PoliceMan {
-    func arrestCriminals() {
-    }
-    let name: String
-//4.
-    let toolman: ToolMan
-}
 //3.
 protocol ToolMan {
     func fixComputer()
 }
+//2.
+struct Person: PoliceMan {
+    let name: String
+    func arrestCriminals(){}
+//4.
+    var toolman: ToolMan
+    }
 //5.
 struct Engineer: ToolMan {
     func fixComputer() {
     }
 }
 //6.
-    let Person = "Steven"
+
+let steven = Person(name: "Steven", toolman: ToolMan)
 //Error handling in Swift
-enum GuessNumberGameError {
+enum GuessNumberGameError: Error {
     case wrongNumber
 }
 class GuessNumerGame {
     var targetNumber = 10
     func guess(number: Int) throws {
         guard number == targetNumber else {
-            throw GuessNumberGameError.wrongNumber
-}
+            throw GuessNumberGameError.wrongNumber}
         print("Guess the right number: \(targetNumber)")
     }
 }
-        .guess(number: 20 )
+var guessNumber = GuessNumerGame()
+try guessNumber.guess(number: 20)
 
